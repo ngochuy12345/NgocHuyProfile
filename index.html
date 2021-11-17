@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>NguyenNgocHuy Profile</title>
+    <link rel = "icon" href = "books.ico">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Nguyen Ngoc Huy</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#education" onclick="toggleMenu();">Educations</a></li>
+            <li><a href="#interest" onclick="toggleMenu();">Interests</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>Hello, I'm <br><span>Nguyen Ngoc Huy</span></h2>
+            <a href="#" class="btn">About Me</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About Me</h2>
+        </div>
+            <div class="content">
+            <div class="contentBx">
+                
+                <p>Hello, I'm Nguyen Ngoc Huy. I was born in Da Nang city .I have loved computers since I was in middle school.So I took the entrance exam to the University of Science and Technology, majoring in IT. Currently, I'm learning everything about programming and I'm happy with what I've chosen. 
+                </p>
+            </div>
+
+            <div class="w50">
+                <img src="img1.jpg" class="img">
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <div class="heading white">
+            <h2>Educations</h2>
+           
+        </div>
+        <div class="content">
+            <div class="educationBX">
+                <img src="icon1.png">
+                <h2>Web Design</h2>
+            </div>
+            <div class="educationBX">
+                <img src="icon2.png">
+                <h2>Web Development</h2>
+            </div>
+            <div class="educationBX">
+                <img src="icon3.png">
+                <h2>Android App</h2>
+            </div>
+            <div class="educationBX">
+                <img src="icon4.png">
+                <h2>Photography</h2>
+            </div>
+            <div class="educationBX">
+                <img src="icon5.png">
+                <h2>Content Writing</h2>
+            </div>
+            <div class="educationBX">
+                <img src="icon6.png">
+                <h2>Video Editing</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="interest" id="interest">
+        <div class="heading">
+            <h2>Interests</h2>
+        </div>
+        <div class="content">
+            <div class="interestBx">
+                <img src="product1.jpg">
+            </div>
+            <div class="interestBx">
+                <img src="product2.jpg">
+            </div>
+            <div class="interestBx">
+                <img src="product3.jpg">
+            </div>
+            <div class="interestBx">
+                <img src="product4.jpg">
+            </div>
+        </div>
+        <div class="heading">
+            <a href="#" class="btn">View More</a>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contact </h2>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>XXX Da Nang<br> Viet Nam</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+84xxxxx7865</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>nguyenhuy19092001@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3> Message Me</h3>
+                    <input type="text" name="" placeholder="Full Name">
+                    <input type="email" name="" placeholder="Email">
+                    
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="cc">
+        <p>Make with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+          </svg> by Ngoc Huy</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0);
+        });
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
